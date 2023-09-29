@@ -1,0 +1,219 @@
+import 'dart:io';
+
+void main() {
+  while (true) {
+    print("Lenght Conversation");
+    print("Temprature Conversation");
+    print("Area Conversation");
+    print("Weight Conversation");
+    print("Time Conversation");
+    var choice = stdin.readLineSync() ?? "";
+    if (choice == 1) {
+      lengthConversion();
+    } else if (choice == 2) {
+      temperatureConversion();
+    } else if (choice == 3) {
+      areaConversation();
+    } else if (choice == 4) {
+      weightConversion();
+    } else if (choice == 5) {
+      timeConversion();
+    } else {
+      print("You Chose the Wrong Option");
+    }
+    print("Do You want Continue");
+    print("yes or No ");
+    bool yes = true;
+    bool no = false;
+    var continuechoice = stdin.readLineSync() ?? "";
+    if (continuechoice == yes) {
+      var choice = stdin.readLineSync() ?? "";
+    } else {}
+  }
+}
+
+void lengthConversion() {
+  print("Select a length conversion option:");
+  print("1. Meter to Kilometer");
+  print("2. Kilometer to Meter");
+  print("3. Feet to Inches");
+  print("4. Inches to Feet");
+  print("5. Centimeter to Meter");
+  print("6. Meter to Centimeter");
+  String d = stdin.readLineSync() ?? "";
+  double result;
+  if (d == "1") {
+    print("Enter length in meters:");
+    double meters = double.parse(stdin.readLineSync() ?? "0");
+    result = meters / 1000;
+    print("Result: $meters meters = $result kilometers");
+  } else if (d == "2") {
+    print("Enter length in kilometers:");
+    double kilometers = double.parse(stdin.readLineSync() ?? "0");
+    result = kilometers * 1000;
+    print("Result: $kilometers kilometers = $result meters");
+  } else if (d == "3") {
+    print("Enter length in feet:");
+    double feet = double.parse(stdin.readLineSync() ?? "0");
+    result = feet * 12;
+    print("Result: $feet feet = $result inches");
+  } else if (d == "4") {
+    print("Enter length in inches:");
+    double inches = double.parse(stdin.readLineSync() ?? "0");
+    result = inches / 12;
+    print("Result: $inches inches = $result feet");
+  } else if (d == "5") {
+    print("Enter length in centimeters:");
+    double centimeters = double.parse(stdin.readLineSync() ?? "0");
+    result = centimeters / 100;
+    print("Result: $centimeters centimeters = $result meters");
+  } else if (d == "6") {
+    print("Enter length in meters:");
+    double meters = double.parse(stdin.readLineSync() ?? "0");
+    result = meters * 100;
+    print("Result: $meters meters = $result centimeters");
+  } else {
+    print("Invalid choice. Please select a valid option.");
+  }
+}
+
+void timeConversion() {
+  print("Select a time conversion option:");
+  print("1. Seconds to Minutes");
+  print("2. Minutes to Seconds");
+  print("3. Minutes to Hours");
+  print("4. Seconds to Hours");
+  print("5. Milliseconds to Minutes");
+  print("6. Milliseconds to Hours");
+
+  String y = stdin.readLineSync() ?? "";
+
+  double result;
+
+  if (y == "1") {
+    print("Enter time in seconds:");
+    double seconds = double.parse(stdin.readLineSync() ?? "0");
+    result = seconds / 60;
+    print("Result: $seconds seconds = $result minutes");
+  } else if (y == "2") {
+    print("Enter time in minutes:");
+    double minutes = double.parse(stdin.readLineSync() ?? "0");
+    result = minutes * 60;
+    print("Result: $minutes minutes = $result seconds");
+  } else if (y == "3") {
+    print("Enter time in minutes:");
+    double minutes = double.parse(stdin.readLineSync() ?? "0");
+    result = minutes / 60;
+    print("Result: $minutes minutes = $result hours");
+  } else if (y == "4") {
+    print("Enter time in seconds:");
+    double seconds = double.parse(stdin.readLineSync() ?? "0");
+    result = seconds / 3600;
+    print("Result: $seconds seconds = $result hours");
+  } else if (y == "5") {
+    print("Enter time in milliseconds:");
+    double milliseconds = double.parse(stdin.readLineSync() ?? "0");
+    result = milliseconds / 60000;
+    print("Result: $milliseconds milliseconds = $result minutes");
+  } else if (y == "6") {
+    print("Enter time in milliseconds:");
+    double milliseconds = double.parse(stdin.readLineSync() ?? "0");
+    result = milliseconds / 3600000;
+    print("Result: $milliseconds milliseconds = $result hours");
+  } else {
+    print("Invalid choice. Please select a valid option.");
+  }
+}
+
+void weightConversion() {
+  print("Select a weight conversion option:");
+  print("1. Kilograms to Grams");
+  print("2. Grams to Kilograms");
+  print("3. Pounds to Kilograms");
+  print("4. Kilograms to Tons");
+  print("5. Tons to Kilograms");
+  String e = stdin.readLineSync() ?? "";
+  double result;
+  if (e == "1") {
+    print("Enter weight in kilograms:");
+    double kilograms = double.parse(stdin.readLineSync() ?? "0");
+    result = kilograms * 1000;
+    print("Result: $kilograms kilograms = $result grams");
+  } else if (e == "2") {
+    print("Enter weight in grams:");
+    double grams = double.parse(stdin.readLineSync() ?? "0");
+    result = grams / 1000;
+    print("Result: $grams grams = $result kilograms");
+  } else if (e == "3") {
+    print("Enter weight in pounds:");
+    double pounds = double.parse(stdin.readLineSync() ?? "0");
+    result = pounds / 2.205;
+    print("Result: $pounds pounds = $result kilograms");
+  } else if (e == "4") {
+    print("Enter weight in kilograms:");
+    double kilograms = double.parse(stdin.readLineSync() ?? "0");
+    result = kilograms / 1000;
+    print("Result: $kilograms kilograms = $result tons");
+  } else if (e == "5") {
+    print("Enter weight in tons:");
+    double tons = double.parse(stdin.readLineSync() ?? "0");
+    result = tons * 1000;
+    print("Result: $tons tons = $result kilograms");
+  } else {
+    print("Invalid choice. Please select a valid option.");
+  }
+}
+
+void areaConversation() {
+  print("Select an area conversion option:");
+  print("1. Square Miles to Square Yards");
+  print("2. Square Yards to Square Miles");
+  print("3. Square Yards to Square Feet");
+  print("4. Square Feet to Square Yards");
+  String f = stdin.readLineSync() ?? "";
+  double result;
+  if (f == "1") {
+    print("Enter area in square miles:");
+    double squareMiles = double.parse(stdin.readLineSync() ?? "0");
+    result = squareMiles * 3097600;
+    print("Result: $squareMiles square miles = $result square yards");
+  } else if (f == "2") {
+    print("Enter area in square yards:");
+    double squareYards = double.parse(stdin.readLineSync() ?? "0");
+    result = squareYards / 3097600;
+    print("Result: $squareYards square yards = $result square miles");
+  } else if (f == "3") {
+    print("Enter area in square yards:");
+    double squareYards = double.parse(stdin.readLineSync() ?? "0");
+    result = squareYards * 9;
+    print("Result: $squareYards square yards = $result square feet");
+  } else if (f == "4") {
+    print("Enter area in square feet:");
+    double squareFeet = double.parse(stdin.readLineSync() ?? "0");
+    result = squareFeet / 9;
+    print("Result: $squareFeet square feet = $result square yards");
+  } else {
+    print("Invalid choice. Please select a valid option.");
+  }
+}
+
+void temperatureConversion() {
+  print("Select a temperature conversion option:");
+  print("1. Fahrenheit to Celsius");
+  print("2. Celsius to Fahrenheit");
+  String x = stdin.readLineSync() ?? "";
+  double result;
+  if (x == "1") {
+    print("Enter temperature in Fahrenheit:");
+    double fahrenheit = double.parse(stdin.readLineSync() ?? "0");
+    result = (fahrenheit - 32) * 5 / 9;
+    print("Result: $fahrenheit degrees Fahrenheit = $result degrees Celsius");
+  } else if (x == "2") {
+    print("Enter temperature in Celsius:");
+    double celsius = double.parse(stdin.readLineSync() ?? "0");
+    result = (celsius * 9 / 5) + 32;
+    print("Result: $celsius degrees Celsius = $result degrees Fahrenheit");
+  } else {
+    print("Invalid choice. Please select a valid option.");
+  }
+}
